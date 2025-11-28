@@ -38,3 +38,6 @@ data summary (numeric + study metadata)
      ↓
 LLM → scientific narrative summary
 ```
+
+# License
+MIT License
