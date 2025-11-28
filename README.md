@@ -16,7 +16,7 @@ To set up your OpenAI key:
 export OPENAI_API_KEY="your_key_here"
 ```
 
-# Project Architecture 
+# Project Architecture
 ```
 question (NL)
      ↓
