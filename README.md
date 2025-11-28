@@ -12,11 +12,5 @@ pip install -r requirements.txt
 ~~~
 To set up your OpenAI key:
 ```
-pip install -r requirements.txt
+export OPENAI_API_KEY="your_key_here"
 ```
-
-# Overview
-The structure within analysis is as follows:
-~~~
-
-~~~
