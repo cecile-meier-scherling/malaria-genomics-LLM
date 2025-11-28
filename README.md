@@ -15,3 +15,16 @@ To set up your OpenAI key:
 ```
 export OPENAI_API_KEY="your_key_here"
 ```
+
+# Project Architecture 
+```
+question (NL)
+     ↓
+LLM → structured query (JSON)
+     ↓
+data filter (deterministic)
+     ↓
+data summary (numeric + study metadata)
+     ↓
+LLM → scientific narrative summary
+```
