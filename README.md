@@ -8,7 +8,8 @@ cd malaria-genomics-LLM
 ~~~
 To install the dependencies:
 ~~~
-pip install -r requirements.txt
+conda env create -f environment.yml
+conda activate malaria-genomics-llm
 ~~~
 To set up your OpenAI key:
 ```
