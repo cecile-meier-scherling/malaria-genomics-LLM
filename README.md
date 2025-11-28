@@ -17,6 +17,16 @@ export OPENAI_API_KEY="your_key_here"
 ```
 
 # Project Architecture
+Malaria genomic surveillance data is rich but difficult to navigate across multiple sources.
+This project provides a simple interface to:
+1. Ask questions in natural language: _What is the trend of K13 561H in Uganda after 2012?_
+2. Translate the questions into structured filters using an LLM
+   ```
+   {country: "Uganda", mutation: "K13_561H", year_min: 2012}
+   ```
+3. Extract and summarize relevant data from the integrated database, such as prevalence over time, study-level contributions, geographic differences, and sample sizes and caveats.
+4. Generate a scientific interpretation using an LLM: Clear narrative using only the provided numeric summaries and study metadata.
+
 ```
 question (NL)
      ↓
