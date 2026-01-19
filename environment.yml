@@ -1,0 +1,8 @@
+name: malaria-genomics-llm
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+prefix: /Users/cmeiersc/miniconda3/envs/malaria-genomics-llm
