@@ -43,9 +43,9 @@ malaria-genomics-llm --data path/to/data.csv --question "How has 675V prevalence
 
 ### 5) Example Questions
 Example questions:
-	•	“How has 675V prevalence changed over time in Uganda?”
-	•	“Compare 675V prevalence across sites in Rwanda from 2015 to 2020.”
-	•	“What studies report 675V in Ethiopia?”
+- “How has 675V prevalence changed over time in Uganda?”
+- “Compare 675V prevalence across sites in Rwanda from 2015 to 2020.”
+- “What studies report 675V in Ethiopia?”
 
 ---
 # Project Architecture
