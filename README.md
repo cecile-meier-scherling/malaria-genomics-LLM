@@ -1,21 +1,53 @@
 # Malaria LLM Assistant
-A lightweight LLM-powered tool for querying, summarizing, and interpreting integrated malaria genomic prevalence data. The assistant converts natural-language questions into structured queries, extracts relevant data from pf7, WHO, WWARN, and systematic-review datasets, and generates clear scientific narratives.
+A lightweight command-line tool for asking natural-language questions about **pre-computed malaria resistance prevalence data** (CSV/Parquet).  
+The tool:
+1) converts a question into a structured filter (country/mutation/year range),
+2) filters your dataset,
+3) summarizes trends by year/site/study,
+4) asks a **local LLM via Ollama** to produce a concise scientific narrative.
 
-# Installation
+## Features
+- Works with `.csv` or `.parquet`
+- Structured query parsing (country, mutation, year_min, year_max)
+- Weighted prevalence summaries (by sample size)
+- Local inference with **Ollama** (no cloud API required)
+
+---
+
+## Quickstart (recommended)
+
+### 1) Install Ollama and pull a model
+Install Ollama: https://ollama.com
+
+Then pull a model (default: `llama3`):
+```bash
+ollama pull llama3
+```
+
+### 2) Install this package
 ~~~
 git clone git@github.com:cecile-meier-scherling/malaria-genomics-LLM.git
 cd malaria-genomics-LLM
+pip install -e .
 ~~~
-To install the dependencies:
+### 3) Install the dependencies:
 ~~~
 conda env create -f environment.yml
 conda activate malaria-genomics-llm
 ~~~
-To set up your OpenAI key:
-```
-export OPENAI_API_KEY="your_key_here"
-```
 
+### 4) Run the interactive prompt with data
+~~~
+malaria-genomics-llm --data path/to/data.csv --question "How has 675V prevalence changed over time in Uganda?"
+~~~
+
+### 5) Example Questions
+Example questions:
+	•	“How has 675V prevalence changed over time in Uganda?”
+	•	“Compare 675V prevalence across sites in Rwanda from 2015 to 2020.”
+	•	“What studies report 675V in Ethiopia?”
+
+---
 # Project Architecture
 Malaria genomic surveillance data is rich but difficult to navigate across multiple sources.
 This project provides a simple interface to:
