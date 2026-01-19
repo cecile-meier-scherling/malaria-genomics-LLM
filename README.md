@@ -37,6 +37,7 @@ conda activate malaria-genomics-llm
 ~~~
 
 ### 4) Run the interactive prompt with data
+The code has two arguments: data and question. If the data is not provided as an argument, the model uses the data path defined in the config file.
 ~~~
 malaria-genomics-llm --data data/raw/all_who_get_prevalence.csv --question "How has 675V prevalence changed over time in Uganda?"
 ~~~
