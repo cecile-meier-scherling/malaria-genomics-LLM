@@ -38,8 +38,20 @@ conda activate malaria-genomics-llm
 
 ### 4) Run the interactive prompt with data
 ~~~
-malaria-genomics-llm --data path/to/data.csv --question "How has 675V prevalence changed over time in Uganda?"
+malaria-genomics-llm --data data/raw/all_who_get_prevalence.csv --question "How has 675V prevalence changed over time in Uganda?"
 ~~~
+
+Data requirements: Your input file must contain (after loading/renaming) these columns:
+- country (string)
+- site (string)
+- year (int) : sampling/collection year
+- mutation (string) : gene:position:aa (e.g. k13:675:V)
+- prevalence (float)
+- n_samples (int)
+- study_id (string or int)
+- authors (string)
+- year_pub (int)
+- url (string)
 
 ### 5) Example Questions
 Example questions:
